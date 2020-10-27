@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Blog(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=25)
     pub_date = models.DateTimeField()
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
@@ -11,7 +11,7 @@ class Blog(models.Model):
         return self.title
 
     def summary(self):
-        return self.body[:100]
+        return self.body[:25] + '...'
 
     def pub_date_pretty(self):
         return self.pub_date.strftime('%b %e %Y')
