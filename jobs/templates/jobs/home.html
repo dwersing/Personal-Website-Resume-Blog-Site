@@ -45,7 +45,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link active" href="#">Home</a>
-      <a class="nav-item nav-link" href="{% static 'MW Resume.pdf'%}">Resume</a>
+      <a class="nav-item nav-link" href="{% static 'D_Wersing_Resume.pdf' %}" target="_blank">Resume</a>
       <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
 
     </div>
@@ -60,7 +60,7 @@
       <h1 class="jumbotron-heading">Hi!  My name is Daniel Wersing</h1>
       <p class="lead text-muted">Welcome to my website!</p>
       <p>
-        <a href="mailto:dwersing@gmail.com?subject=I saw your website and want to speak with you" class="btn btn-primary my-2">Contact Me</a>
+        <a href="mailto:dwersing@gmail.com?subject=I saw your website and want to chat with you" class="btn btn-primary my-2">Contact Me</a>
       </p>
       <img src="{% static 'MELECH.JPG' %}" height="600"/>
     </div>
@@ -81,15 +81,7 @@
               </p>
             </div>
           </div>
-        <!--<div class="col-md-4">-->
-          <!--<div class="card mb-4 shadow-sm">-->
-            <!--<image class="card-img-top" src="{{ job.image.url }}"></image>-->
-            <!--<div class="card-body">-->
-              <!--<p class="card-text">{{ job.summary }}</p>-->
-
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
+        
           {% endfor %}
         </div>
       </div>
