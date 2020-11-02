@@ -35,7 +35,7 @@
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-color:#e9ecef">
     <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="{% url 'home' %}">Daniel Wersing</a>
@@ -55,19 +55,19 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center" style="background-color:aliceblue">
     <div class="container">
       <h1 class="jumbotron-heading">Hi!  My name is Daniel Wersing</h1>
       <p class="lead text-muted">Welcome to my website!</p>
       <p>
         <a href="mailto:dwersing@gmail.com?subject=I saw your website and want to chat with you" class="btn btn-primary my-2">Contact Me</a>
       </p>
-      <img src="{% static 'MELECH.JPG' %}" height="600"/>
+      <img src="{% static 'd.home.jpg' %}" height="600"/>
     </div>
   </section>
     <h1 style="text-align: center">A little about myself</h1>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-5">
 
     <div class="container">
       <div class="card-deck">
