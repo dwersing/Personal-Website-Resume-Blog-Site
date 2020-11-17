@@ -17,6 +17,9 @@
 
 
     <style>
+    a {
+      text-decoration: none;
+    }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -31,18 +34,33 @@
           font-size: 3.5rem;
         }
       }
+
+      .project-list-container {
+          float:right;
+          width:15%;
+          border-left:3px solid gainsboro;
+          color:grey;
+          font-size:14px;
+          padding-left:20px;
+          height:400px;
+        }
+
+      .project-list-container div a
+      {
+      color:gray;
+      }
     </style>
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
   </head>
-  <body style="background-color:#e9ecef">
-    <header>
+  <body style="background-color:aliceblue">
+    <header style="margin-bottom:60px;">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="{% url 'home' %}">Daniel Wersing</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link active" href="#">Home</a>
       <a class="nav-item nav-link" href="{% static 'd_wersing.resume.pdf' %}" target="_blank">Resume</a>
@@ -53,21 +71,45 @@
 </nav>
 </header>
 
-<main role="main">
+<main role="main" style="margin:20px;margin-top:80px">
+<div style="margin-bottom:20px;">
+  <div class="project-list-container">
+    <div style="font-size:larger;font-weight:bolder;">Sample Projects</div>
+    <div><a href="https://github.com/dwersing/Personal-Website-Resume-Blog-Site" style="" >Resume/Blog Site (Current Website)</a></div>
+    <div><a href="https://github.com/dwersing/WineApp_Project" style="" >Wine Tasting Notes App</a></div>
+    <div><a href="https://github.com/dwersing/blackjack.game" style="" >Blackjack</a></div>
+    <div><a href="https://github.com/dwersing/Dictionary" style="" >Dictionary</a></div>
+    <div><a href="https://github.com/dwersing/Tic-Tac-Toe" style="" >Tic-Tac-Toe</a></div>
 
-  <section class="jumbotron text-center" style="background-color:aliceblue">
-    <div class="container">
-      <h1 class="jumbotron-heading">Hi!  My name is Daniel Wersing</h1>
-      <p class="lead text-muted">Welcome to my website!</p>
-      <p>
+    <div style="font-size:larger;font-weight:bolder;margin-top:20px;">Upcoming Projects</div>
+    <div>EMT Patient App</div>
+    <p style="margin-top:90px;">
         <a href="mailto:dwersing@gmail.com?subject=I saw your website and want to chat with you" class="btn btn-primary my-2">Contact Me</a>
-      </p>
-      <img class="img-fluid" src="{% static 'd.home.jpg' %}" height="600"/>
-    </div>
-  </section>
-    <h1 style="text-align: center">A little about myself</h1>
 
-  <div class="album py-5">
+  </div>
+  <div style="width:85%;padding:0 1%;" >
+    <div style="float:left;width:35%;margin-right:10%;margin-left:5%;margin-top:15px">
+      <figure>
+        <blockquote style="font-size:24px;text-align:center;margin-top:35px">
+        <i>“Far better it is to dare mighty things, to win glorious triumphs,
+          even though checkered by failure, than to take rank with those poor spirits who neither enjoy much nor suffer
+          much, because they live in the gray twilight that knows neither victory nor defeat.”</i>
+        </blockquote>
+        <figcaption style="text-align:right;padding-right:30px;">
+          &mdash; Teddy Roosevelt, <cite>The Strenuous Life</cite>
+        </figcaption>
+      </figure>
+
+    </div>
+    <div style="float:left;width:47%;margin-right:3%;max-height:400px;">
+      <img class="img-fluid" src="{% static 'd.home.jpg' %}" style="max-height:400px"/>
+    </div>
+  </div>
+  <div style="clear:both"></div>
+</div>
+  <div style="width:100%;margin-top:30px;padding-top:20px;border-top:3px solid gainsboro">
+    <div style="font-size:30px;color:gray;text-align:center;">About me</div>
+   <div class="album py-5">
 
     <div class="container">
       <div class="card-deck">
@@ -86,6 +128,9 @@
         </div>
       </div>
     </div>
+
+  </div>
+
 
 </main>
 
